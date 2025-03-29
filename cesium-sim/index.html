@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>CesiumJS Globe Base</title>
+    <!-- Include the CesiumJS Widgets CSS -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css"></script>
+    <!-- Basic styles to make the globe fill the page -->
+    <style>
+      html,
+      body,
+      #cesiumContainer {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The div element that will contain the CesiumJS globe -->
+    <div id="cesiumContainer"></div>
+
+    <!-- Include the CesiumJS library -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js"></script>
+
+    <!-- Include your custom JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>

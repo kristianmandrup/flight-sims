@@ -1,0 +1,14 @@
+{
+  "name": "flight-sim",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "three": "^0.175.0",
+    "three-globe": "^2.42.3"
+  },
+  "devDependencies": {
+    "vite": "^6.2.3"
+  }
+}

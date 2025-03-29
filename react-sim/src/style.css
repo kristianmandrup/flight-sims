@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#infoPanel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-family: monospace;
+  font-size: 12px;
+  border-radius: 5px;
+  line-height: 1.4;
+  z-index: 10; /* Ensure it's above the canvas */
+}
+
+#infoPanel h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #0f0;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+#infoPanel span:first-child {
+  /* Style the label spans */
+  display: inline-block;
+  min-width: 70px;
+  color: #aaa;
+}
+
+#infoPanel hr {
+  border-color: #555;
+  margin: 10px 0;
+}

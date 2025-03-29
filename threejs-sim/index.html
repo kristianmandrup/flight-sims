@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Globe Flight</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+      }
+      canvas {
+        display: block;
+      }
+      /* Info Panel Style */
+      #infoPanel {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 250px; /* Adjust width as needed */
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+        color: #fff; /* White text */
+        font-family: monospace; /* Monospaced font for alignment */
+        font-size: 12px; /* Adjust font size */
+        border-radius: 5px;
+        line-height: 1.4;
+      }
+      #infoPanel h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #0f0; /* Green heading */
+        border-bottom: 1px solid #555;
+        padding-bottom: 5px;
+      }
+      #infoPanel span {
+        display: inline-block;
+        min-width: 70px; /* Align labels */
+        color: #aaa; /* Grey labels */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Info Panel Div -->
+    <div id="infoPanel">
+      <h4>Flight Info & Controls</h4>
+      <div id="flightData">
+        <span>Position:</span> <span id="pos">N/A</span><br />
+        <span>Altitude:</span> <span id="alt">N/A</span> km<br />
+        <span>Heading:</span> <span id="hdg">N/A</span> °<br />
+        <span>Speed:</span> <span id="spd">N/A</span> units/s<br />
+        <span>Orbit:</span> <span id="orbitStatus">ON</span>
+      </div>
+      <hr style="border-color: #555; margin: 10px 0" />
+      <div>
+        <span>[ArrowUp]</span> Move Fwd<br />
+        <span>[ArrowDown]</span> Move Bwd<br />
+        <span>[ArrowLeft]</span> Yaw Left<br />
+        <span>[ArrowRight]</span> Yaw Right<br />
+        <span>[W]</span> Increase Speed<br />
+        <span>[S]</span> Decrease Speed<br />
+        <span>[C]</span> Toggle Camera<br />
+        <span>[P]</span> Pause/Play Orbit
+      </div>
+    </div>
+
+    <!-- The script MUST be type="module" because globe.js uses imports -->
+    <script type="module" src="/globe.js"></script>
+  </body>
+</html>
