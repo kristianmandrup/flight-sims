@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
+import { Object3D, Mesh } from "three";
 import { useGLTF } from "@react-three/drei"; // Import useGLTF
 import { useFlightContext } from "../context/FlightContext";
 import { useKeyboardControls } from "../hooks/useKeyboardControls";
@@ -35,8 +35,8 @@ export const Airplane: React.FC = () => {
     setIsCockpitView,
   } = useFlightContext();
   const controls = useKeyboardControls();
-  const cockpitAnchorRef = useRef<THREE.Object3D>(null!);
-  const indicatorRef = useRef<THREE.Mesh>(null!);
+  const cockpitAnchorRef = useRef<Object3D>(null!);
+  const indicatorRef = useRef<Mesh>(null!);
   const currentSpeed = useRef<number>(AIRPLANE_INITIAL_SPEED);
   const { camera } = useThree();
 

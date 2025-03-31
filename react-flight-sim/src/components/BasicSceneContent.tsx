@@ -9,7 +9,7 @@ import { useFlightContext } from "../context/FlightContext";
 import { useKeyboardControls } from "../hooks/useKeyboardControls";
 import * as C from "../constants"; // Import constants with an alias
 
-const SceneContent: React.FC = () => {
+export const SceneContent: React.FC = () => {
   const { isOrbitPaused, isCockpitView, airplaneRef, setIsOrbitPaused } =
     useFlightContext();
   const keyboardControls = useKeyboardControls(); // Get momentary toggle state here too
@@ -107,28 +107,5 @@ const SceneContent: React.FC = () => {
         enabled={!isCockpitView} // Initially set based on context
       />
     </>
-  );
-};
-
-export const SceneContainer: React.FC = () => {
-  return (
-    <Canvas
-      camera={{
-        position: [
-          C.EARTH_ORBIT_RADIUS + C.earthRadius * 2,
-          C.earthRadius,
-          C.earthRadius * 2,
-        ],
-        fov: 75,
-        near: 0.1,
-        far: 2000,
-      }}
-    >
-      <Suspense fallback={null}>
-        {" "}
-        {/* Needed for async loading (textures, models) */}
-        <SceneContent />
-      </Suspense>
-    </Canvas>
   );
 };
